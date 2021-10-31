@@ -1,7 +1,7 @@
 
 # Artificial Neural Networks and Deep Learning Projects
 
-### Homework 1: Image Classification
+## Homework 1: Image Classification
 
 In order to create our neural network, at first we started with a "custom" implementation. We took inspiration from VGG, and we stacked several convolutional, activation pooling layers. At the end, before the softmax, we used dense layers with dropout to force neurons to learn indipendent features.  
 To perform early stopping, we split the dataset in two parts, and we found that 20% for validation was the best compromise.  
@@ -20,8 +20,8 @@ At first we have freezed the weights of the models, and we have added the FC lay
 
 After that we have tried to add another Dense layer in the FC part of the networks with 256 neurons and we have noticed an improvement on the performance especially with EfficientNetB6 and EfficientNetB7. In order to achieve better performance we have tried to reduce the validation set to have a bigger training set, but the networks did not improve their results.  
 The final model is composed by the ensemble of: EfficientNetB7 + EfficientNetB6 + Xception + InceptionResNetV2, and can be loaded in the next notebook.
-#
-### Homework 2: Image Segmentation
+
+## Homework 2: Image Segmentation
 
 In order to create our neural network, at first we started with a "custom" implementation. For the first part, the encoder that performs the downsampling, we took inspiration from VGG, and we stacked several convolutional, activation pooling layers. Then after the "bottleneck", we have built the decoder part that performs the upsampling, by using convolutional and activation layers with a decreasing number of filters.  
 To train the network we performed early stopping techniques on the validation accuracy. We also used data augmentation; we got the best result by using the larger image size that ram allowed, so that the final upsampling of the mask using nearest neighbours had the least possible impact on the result.  
@@ -36,8 +36,8 @@ We have freezed the weights of the models and we have added the decoder part. Wi
 
 After that we have tried to implement a U-Net "by hand", by adding the skip connection between the layers but the results were not better than before.  
 Finally we have found an implementation of a predefined network similar to U-Net, called Linknet, on github (https://github.com/qubvel/segmentation_models), and we used it for transfer learning. We retrained all the weights and we got a final test IoU of 0.82 on Bipbip Mais. To get the results for all the other teams and crops, we just retrained the model for those datasets without particular tuning.
-#
-### Homework 3: Visual Question Answering
+
+## Homework 3: Visual Question Answering
 
 For the VQA problem, our approach was to pass the two inputs, the image and the question, to two differents nets and then merge the two latent representations with concatenation to make the final prediction.  
 For the image we tried different nets, and at the end InceptionResNetV2 resulted in the best performance.  
