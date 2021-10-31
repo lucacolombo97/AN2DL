@@ -1,6 +1,8 @@
 
 # Artificial Neural Networks and Deep Learning Projects
 
+*Projects of the course of AN2DL at Politecnico di Milano*
+
 ## Homework 1: Image Classification
 
 In order to create our neural network, at first we started with a "custom" implementation. We took inspiration from VGG, and we stacked several convolutional, activation pooling layers. At the end, before the softmax, we used dense layers with dropout to force neurons to learn indipendent features.  
