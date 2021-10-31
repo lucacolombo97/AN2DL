@@ -1,4 +1,5 @@
-## Artificial Neural Networks and Deep Learning Projects
+
+# Artificial Neural Networks and Deep Learning Projects
 
 #### Homework 1: Image Classification
 In order to create our neural network, at first we started with a "custom" implementation. We took inspiration from VGG, and we stacked several convolutional, activation pooling layers. At the end, before the softmax, we used dense layers with dropout to force neurons to learn indipendent features. To perform early stopping, we split the dataset in two parts, and we found that 20% for validation was the best compromise. We also did some tuning regarding data augmentation (the best parameters are the ones found below) and also for the learning rate; we used a custom callback to change the learning rate at each epoch, as we discovered that this allowed us to better avoid local minima. After a few trainings (around 100 epochs), we "hit a wall" with our custom model around 0.65 accuracy in validation, and we decided to try transfer learning (see next notebook).   
