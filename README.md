@@ -1,7 +1,8 @@
 
 # Artificial Neural Networks and Deep Learning Projects
 
-*AN2DL course projects at Politecnico di Milano*
+*AN2DL course projects at Politecnico di Milano  
+Developed in collaboration with: @Lodz97*
 
 ## Homework 1: Image Classification
 
